@@ -1,27 +1,20 @@
 package com.example;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 
-public class App extends Application {
+public class App {
+	
+	/*
+	 * converte i gradi dal formato fahrenheit a quello celsius. 
+	 * Chi sviluppa E ANCHE testa l'applicazione implementa la 
+	 * formula in maniera errata, diversa da quella effettiva 
+	 * CELSIUS = (FAHRENEIT - 32)*5/9,
+	 *  per cui quando farà i test cases risulteranno non esserci errori 
+	 *  o failures, ma semplicemente perché la formula è errata 
+	 *  e si sta aspettando risultati errati calcolati con una formula 
+	 *  sbagliata.
+	 */
 
-    public boolean someMethod() {
-        return true;
-    }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("hellofx.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
+	public double convertiInCelsius(double fahrenheit) {
+		return (fahrenheit -35) *(5/9);
+	}
 }
